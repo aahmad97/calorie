@@ -1,4 +1,4 @@
-# calorie
+# Fittrack
 Calorie Tracker akin to myfitnesspal
 
 fittrack/

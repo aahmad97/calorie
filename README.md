@@ -2,7 +2,7 @@
 
 An open source fitness and nutrition tracking platform that empowers users to monitor their caloric intake, nutritional balance, and fitness activities while maintaining full control of their personal data.
 
-## 🌟 Features
+## Features
 
 - **Calorie Tracking**: Log meals and snacks with comprehensive nutritional data
 - **Barcode Scanning**: Quickly add packaged foods to your daily log
@@ -15,7 +15,7 @@ An open source fitness and nutrition tracking platform that empowers users to mo
 - **Cross-Platform**: Works on Android and iOS devices
 - **Customizable**: Adapt the tracker to your specific dietary needs and goals
 
-## 📱 Components
+## Components
 
 This project consists of several main components:
 
@@ -34,17 +34,17 @@ This project consists of several main components:
 
 1. Clone this repository:
    ```
-  
+   https://github.com/aahmad97/calorie.git
    ```
 
-2. Set up your development environment:
+1. Set up your development environment:
    - Install React Native environment for the mobile app
    - Set up MongoDB for local food database development
    - Configure your preferred IDE with the project style guide
 
-3. Check the `docs/` directory for detailed setup instructions
+2. Check the `docs/` directory for detailed setup instructions
 
-## 📖 Documentation
+## Documentation
 
 - [Architecture Overview](docs/architecture.md)
 - [API Documentation](docs/api.md)
@@ -52,21 +52,20 @@ This project consists of several main components:
 - [Contributing Guide](CONTRIBUTING.md)
 - [Nutritional Calculation Methods](docs/nutrition-calculations.md)
 
-## 🛠️ Technology Stack
+## 🛠Technology Stack
 
-- **Mobile App**: React Native
 - **Food Database**: MongoDB
 - **API Layer**: GraphQL
 - **Backend (Optional)**: Node.js with Express
 
-## 🍎 Nutritional Data Sources
+## Nutritional Data Sources
 
 This project uses open data sources for nutritional information:
 - USDA FoodData Central
 - Open Food Facts database
 - Community-contributed and verified food entries
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions from everyone! We especially need help with:
 - Expanding the food database
@@ -82,7 +81,7 @@ Before contributing, please read our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📊 Project Status
+## Project Status
 
 This project is currently in early development. We are working on:
 
@@ -92,12 +91,10 @@ This project is currently in early development. We are working on:
 - [ ] User interface design
 - [ ] Documentation
 
-## 📞 Contact
+## Contact
 
-- **Project Lead**: [Your Name](mailto:your.email@example.com)
+- **Project Lead**: [Ahmad Ahmad](mailto:aahmad22@luc.edu)
 - **GitHub Issues**: For bug reports and feature requests
-- **Community Forum**: [Coming Soon]
-
 ---
 
 *This project aims to make nutrition tracking accessible to everyone while respecting user privacy and promoting healthy eating habits through informed dietary choices.*

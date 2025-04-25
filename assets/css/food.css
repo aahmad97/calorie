@@ -1,0 +1,207 @@
+/* Food Page Specific Styles */
+.food-tracker-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.summary-card {
+    background-color: #f8f9fa;
+}
+
+.summary-content {
+    padding: 15px;
+}
+
+.summary-item {
+    margin-bottom: 15px;
+}
+
+.summary-label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.summary-value {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.macros-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.meal-section {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.meal-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.meal-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.meal-section-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.meal-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.meal-entry {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.meal-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.meal-name {
+    font-weight: 500;
+    color: #333;
+}
+
+.meal-calories {
+    font-weight: 600;
+    color: #666;
+}
+
+.meal-nutrients {
+    display: flex;
+    gap: 15px;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.meal-actions {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    display: flex;
+    gap: 5px;
+}
+
+.btn-icon {
+    padding: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-icon::before {
+    content: "✏️";
+    font-size: 14px;
+}
+
+.delete-icon::before {
+    content: "🗑️";
+    font-size: 14px;
+}
+
+/* Recent Foods Styles */
+.recent-foods {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.recent-food-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.recent-food-name {
+    font-weight: 500;
+    flex-grow: 1;
+}
+
+.recent-food-calories {
+    color: #666;
+    margin-right: 15px;
+}
+
+.btn-sm {
+    font-size: 0.8rem;
+    padding: 3px 8px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid #4CAF50;
+    color: #4CAF50;
+}
+
+.btn-outline:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Progress Bars */
+.carbs-bar {
+    background-color: #FF9800;
+}
+
+.protein-bar {
+    background-color: #2196F3;
+}
+
+.fat-bar {
+    background-color: #F44336;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .meal-nutrients {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .meal-actions {
+        position: static;
+        margin-top: 8px;
+        justify-content: flex-end;
+    }
+}

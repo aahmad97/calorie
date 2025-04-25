@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitTrack - Food Tracking</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/food.css">
+    <link rel="icon" href="../assets/images/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">FitTrack</div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Dashboard</a></li>
+                    <li><a href="food.html" class="active">Food</a></li>
+                    <li><a href="progress.html">Progress</a></li>
+                    <li><a href="goals.html">Goals</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="main-content">
+        <div class="container">
+            <h1>Food Tracking</h1>
+            <p id="current-date"></p>
+            
+            <div class="food-tracker-container">
+                <!-- Daily Summary Card -->
+                <div class="card summary-card">
+                    <div class="card-header">
+                        <div class="card-title">Daily Summary</div>
+                    </div>
+                    <div class="summary-content">
+                        <div class="summary-item">
+                            <div class="summary-label">Calories</div>
+                            <div class="summary-value"><span id="daily-calories">800</span> / <span id="calorie-goal">2000</span></div>
+                            <div class="progress-container">
+                                <div class="progress-bar" id="calorie-progress" style="width: 40%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="macros-summary">
+                            <div class="macro-item">
+                                <div class="stat-label">Carbs</div>
+                                <div class="stat-value"><span id="daily-carbs">100</span>g / <span id="carbs-goal">250</span>g</div>
+                                <div class="progress-container">
+                                    <div class="progress-bar carbs-bar" id="carbs-progress" style="width: 40%;"></div>
+                                </div>
+                            </div>
+                            <div class="macro-item">
+                                <div class="stat-label">Protein</div>
+                                <div class="stat-value"><span id="daily-protein">30</span>g / <span id="protein-goal">125</span>g</div>
+                                <div class="progress-container">
+                                    <div class="progress-bar protein-bar" id="protein-progress" style="width: 24%;"></div>
+                                </div>
+                            </div>
+                            <div class="macro-item">
+                                <div class="stat-label">Fat</div>
+                                <div class="stat-value"><span id="daily-fat">20</span>g / <span id="fat-goal">65</span>g</div>
+                                <div class="progress-container">
+                                    <div class="progress-bar fat-bar" id="fat-progress" style="width: 30%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Food Diary Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Food Diary</div>
+                        <button class="btn btn-primary" id="add-food-btn">Add Food</button>
+                    </div>
+                    
+                    <div class="meal-sections">
+                        <!-- Breakfast Section -->
+                        <div class="meal-section" id="breakfast-section">
+                            <div class="meal-section-header">
+                                <h3>Breakfast</h3>
+                                <div class="meal-calories"><span id="breakfast-calories">300</span> cal</div>
+                            </div>
+                            <div class="meal-items" id="breakfast-items">
+                                <div class="meal-entry">
+                                    <div class="meal-header">
+                                        <div class="meal-name">Scrambled Eggs</div>
+                                        <div class="meal-calories">180 cal</div>
+                                    </div>
+                                    <div class="meal-nutrients">
+                                        <span>Carbs: 2g</span>
+                                        <span>Protein: 12g</span>
+                                        <span>Fat: 14g</span>
+                                    </div>
+                                    <div class="meal-actions">
+                                        <button class="btn btn-icon edit-food" data-meal="breakfast" data-id="1"><i class="edit-icon"></i></button>
+                                        <button class="btn btn-icon delete-food" data-meal="breakfast" data-id="1"><i class="delete-icon"></i></button>
+                                    </div>
+                                </div>
+                                <div class="meal-entry">
+                                    <div class="meal-header">
+                                        <div class="meal-name">Toast with Butter</div>
+                                        <div class="meal-calories">120 cal</div>
+                                    </div>
+                                    <div class="meal-nutrients">
+                                        <span>Carbs: 15g</span>
+                                        <span>Protein: 3g</span>
+                                        <span>Fat: 5g</span>
+                                    </div>
+                                    <div class="meal-actions">
+                                        <button class="btn btn-icon edit-food" data-meal="breakfast" data-id="2"><i class="edit-icon"></i></button>
+                                        <button class="btn btn-icon delete-food" data-meal="breakfast" data-id="2"><i class="delete-icon"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Lunch Section -->
+                        <div class="meal-section" id="lunch-section">
+                            <div class="meal-section-header">
+                                <h3>Lunch</h3>
+                                <div class="meal-calories"><span id="lunch-calories">350</span> cal</div>
+                            </div>
+                            <div class="meal-items" id="lunch-items">
+                                <div class="meal-entry">
+                                    <div class="meal-header">
+                                        <div class="meal-name">Chicken Salad</div>
+                                        <div class="meal-calories">350 cal</div>
+                                    </div>
+                                    <div class="meal-nutrients">
+                                        <span>Carbs: 15g</span>
+                                        <span>Protein: 30g</span>
+                                        <span>Fat: 20g</span>
+                                    </div>
+                                    <div class="meal-actions">
+                                        <button class="btn btn-icon edit-food" data-meal="lunch" data-id="3"><i class="edit-icon"></i></button>
+                                        <button class="btn btn-icon delete-food" data-meal="lunch" data-id="3"><i class="delete-icon"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Dinner Section -->
+                        <div class="meal-section" id="dinner-section">
+                            <div class="meal-section-header">
+                                <h3>Dinner</h3>
+                                <div class="meal-calories"><span id="dinner-calories">250</span> cal</div>
+                            </div>
+                            <div class="meal-items" id="dinner-items">
+                                <div class="meal-entry">
+                                    <div class="meal-header">
+                                        <div class="meal-name">Grilled Salmon</div>
+                                        <div class="meal-calories">250 cal</div>
+                                    </div>
+                                    <div class="meal-nutrients">
+                                        <span>Carbs: 0g</span>
+                                        <span>Protein: 25g</span>
+                                        <span>Fat: 15g</span>
+                                    </div>
+                                    <div class="meal-actions">
+                                        <button class="btn btn-icon edit-food" data-meal="dinner" data-id="4"><i class="edit-icon"></i></button>
+                                        <button class="btn btn-icon delete-food" data-meal="dinner" data-id="4"><i class="delete-icon"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Snacks Section -->
+                        <div class="meal-section" id="snacks-section">
+                            <div class="meal-section-header">
+                                <h3>Snacks</h3>
+                                <div class="meal-calories"><span id="snacks-calories">72</span> cal</div>
+                            </div>
+                            <div class="meal-items" id="snacks-items">
+                                <div class="meal-entry">
+                                    <div class="meal-header">
+                                        <div class="meal-name">Apple</div>
+                                        <div class="meal-calories">72 cal</div>
+                                    </div>
+                                    <div class="meal-nutrients">
+                                        <span>Carbs: 19g</span>
+                                        <span>Protein: 0.4g</span>
+                                        <span>Fat: 0.2g</span>
+                                    </div>
+                                    <div class="meal-actions">
+                                        <button class="btn btn-icon edit-food" data-meal="snacks" data-id="5"><i class="edit-icon"></i></button>
+                                        <button class="btn btn-icon delete-food" data-meal="snacks" data-id="5"><i class="delete-icon"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Recent Foods Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Recent Foods</div>
+                    </div>
+                    <div class="recent-foods" id="recent-foods-list">
+                        <div class="recent-food-item" data-food-id="1">
+                            <div class="recent-food-name">Scrambled Eggs</div>
+                            <div class="recent-food-calories">180 cal</div>
+                            <button class="btn btn-sm btn-outline add-recent-food">Add</button>
+                        </div>
+                        <div class="recent-food-item" data-food-id="2">
+                            <div class="recent-food-name">Chicken Salad</div>
+                            <div class="recent-food-calories">350 cal</div>
+                            <button class="btn btn-sm btn-outline add-recent-food">Add</button>
+                        </div>
+                        <div class="recent-food-item" data-food-id="3">
+                            <div class="recent-food-name">Grilled Salmon</div>
+                            <div class="recent-food-calories">250 cal</div>
+                            <button class="btn btn-sm btn-outline add-recent-food">Add</button>
+                        </div>
+                        <div class="recent-food-item" data-food-id="4">
+                            <div class="recent-food-name">Apple</div>
+                            <div class="recent-food-calories">72 cal</div>
+                            <button class="btn btn-sm btn-outline add-recent-food">Add</button>
+                        </div>
+                        <div class="recent-food-item" data-food-id="5">
+                            <div class="recent-food-name">Toast with Butter</div>
+                            <div class="recent-food-calories">120 cal</div>
+                            <button class="btn btn-sm btn-outline add-recent-food">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Add Food Modal -->
+    <div id="food-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Add Food</div>
+                <button class="close-btn" id="close-food-modal">&times;</button>
+            </div>
+            
+            <div class="form-group">
+                <input type="text" class="form-control" id="food-search" placeholder="Search for a food...">
+            </div>
+            
+            <div class="food-search-results" id="food-results">
+                <!-- Food items will be populated from JavaScript -->
+            </div>
+            
+            <div id="selected-food-details" class="hidden">
+                <h3 id="selected-food-name">Food Name</h3>
+                <div class="form-group">
+                    <label for="food-quantity">Quantity</label>
+                    <input type="number" class="form-control" id="food-quantity" value="1" min="0.25" step="0.25">
+                </div>
+                
+                <div class="form-group">
+                    <label for="meal-type">Add to</label>
+                    <select class="form-control" id="meal-type">
+                        <option value="breakfast">Breakfast</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="dinner">Dinner</option>
+                        <option value="snacks">Snacks</option>
+                    </select>
+                </div>
+                
+                <div class="form-actions">
+                    <button class="btn btn-primary" id="add-food-submit">Add Food</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Edit Food Modal -->
+    <div id="edit-food-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Edit Food</div>
+                <button class="close-btn" id="close-edit-food-modal">&times;</button>
+            </div>
+            
+            <div id="edit-food-form">
+                <h3 id="edit-food-name">Food Name</h3>
+                <div class="form-group">
+                    <label for="edit-food-quantity">Quantity</label>
+                    <input type="number" class="form-control" id="edit-food-quantity" value="1" min="0.25" step="0.25">
+                </div>
+                
+                <div class="form-group">
+                    <label for="edit-meal-type">Meal</label>
+                    <select class="form-control" id="edit-meal-type">
+                        <option value="breakfast">Breakfast</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="dinner">Dinner</option>
+                        <option value="snacks">Snacks</option>
+                    </select>
+                </div>
+                
+                <div class="form-actions">
+                    <button class="btn btn-primary" id="update-food-btn">Update Food</button>
+                    <button class="btn btn-danger" id="delete-food-btn">Delete Food</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="../assets/Scripts/data/foodDatabase.js"></script>
+    <script src="../assets/Scripts/dateUtils.js"></script>
+    <script src="../assets/Scripts/calculators.js"></script>
+    <script src="../assets/Scripts/foodTracker.js"></script>
+    <script src="../assets/Scripts/modalHandler.js"></script>
+    <script src="../assets/Scripts/food.js"></script>
+</body>
+</html>
